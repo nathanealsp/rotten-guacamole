@@ -90,6 +90,9 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+  height: 220px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .card:hover,
@@ -119,4 +122,8 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.overview {
+  overflow: hidden;
 }
