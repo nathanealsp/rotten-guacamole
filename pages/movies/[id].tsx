@@ -3,16 +3,24 @@ import { GetStaticProps } from 'next';
 
 import { MovieDetail } from '../../interfaces/MovieDetail';
 
-import styles from '../../styles/Home.module.css';
+import styles from '../../styles/Moviecard.module.css';
 
 interface IProps {
   movie: MovieDetail;
 }
 
+const BACKDROP_PATH = 'https://image.tmdb.org/t/p/w1280';
+
 export const Movie: React.FC<IProps> = ({ movie }) => {
   if (!movie) return null;
 
-  return <div className={styles.card}>{movie.title}</div>;
+  return (
+    <div>
+      <img src={`${BACKDROP_PATH}${movie.backdrop_path}`} alt="" />
+      <p>{movie.title}</p>
+      {movie.overview}
+    </div>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async ({ params: { id } }) => {
