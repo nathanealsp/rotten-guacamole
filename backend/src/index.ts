@@ -11,6 +11,8 @@ const server = new ApolloServer({
   dataSources: () => ({
     movieService: new API(),
   }),
+  introspection: true,
+  playground: true,
 });
 
 // The `listen` method launches a web server.
