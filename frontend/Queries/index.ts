@@ -12,3 +12,14 @@ export const GET_MOVIE_LIST = gql`
     }
   }
 `;
+
+export const GET_MOVIE_DETAIL = gql`
+  query GetMovieList($movieId: Int) {
+    movieDetail(movieId: $movieId) {
+      title
+      id
+      overview
+      backdrop_path
+    }
+  }
+`;
