@@ -63,6 +63,8 @@ export const Layout: FC<IProps> = ({ children }) => {
 };
 
 // CSS
-const LayoutStyles = styled.div``;
+const LayoutStyles = styled.div`
+  margin: 0;
+`;
 
 export default Layout;

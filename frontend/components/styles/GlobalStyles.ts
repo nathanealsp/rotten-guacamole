@@ -176,10 +176,9 @@ export const GlobalStyles = styled.createGlobalStyle`
   }
 
   *,
-  *::before *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  *:before,
+  *:after {
+    box-sizing: inherit;
   }
 
   body {
@@ -193,5 +192,19 @@ export const GlobalStyles = styled.createGlobalStyle`
     font-weight: 400;
     letter-spacing: 0.2;
     background-color: rgba(0, 0, 0, 0.9);
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(---black);
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  button {
+    font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
   }
 `;
