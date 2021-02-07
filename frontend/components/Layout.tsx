@@ -24,7 +24,6 @@ const HeaderStyles = styled.header`
   place-content: center;
   color: white;
   z-index: 1;
-  padding: 20px;
 
   & .logo-ish {
     font-size: 2rem;
