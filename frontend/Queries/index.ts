@@ -20,6 +20,13 @@ export const GET_MOVIE_DETAIL = gql`
       id
       overview
       backdrop_path
+      tagline
+      genres {
+        name
+      }
+      # vote_average
+      runtime
+      release_date
     }
   }
 `;

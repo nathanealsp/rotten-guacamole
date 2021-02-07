@@ -1,7 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import { GlobalStyles } from './styles/GlobalStyles';
 
@@ -26,11 +25,13 @@ const HeaderStyles = styled.header`
   color: white;
   z-index: 1;
   padding: 20px;
+
   h1 {
     font-size: 2rem;
     font-weight: 600;
     text-decoration: underline;
     text-decoration-color: red;
+    cursor: pointer;
   }
 
   span {

@@ -7,11 +7,11 @@ import { MovieDetail } from '../../interfaces/MovieDetail';
 
 import { GET_MOVIE_DETAIL } from '../../Queries';
 
+import { MovieDetailCard } from '../../components/MovieDetailCard';
+
 interface IProps {
   movie: MovieDetail;
 }
-
-const BACKDROP_PATH = 'https://image.tmdb.org/t/p/w1280';
 
 export const Movie: React.FC = () => {
   const {
@@ -27,13 +27,7 @@ export const Movie: React.FC = () => {
   const movie = data?.movieDetail[0];
   if (!movie) return null;
 
-  return (
-    <div>
-      <img src={`${BACKDROP_PATH}${movie.backdrop_path}`} alt="" />
-      <p>{movie.title}</p>
-      {movie.overview}
-    </div>
-  );
+  return <MovieDetailCard movie={movie} />;
 };
 
 export default Movie;
