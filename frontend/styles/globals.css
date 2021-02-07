@@ -203,3 +203,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}

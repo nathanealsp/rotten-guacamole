@@ -6,24 +6,15 @@ interface IProps {
   children: ReactNode;
 }
 
-const InnerStyles = styled.div`
-  max-width: var(--maxWidth);
-  margin: 0 auto;
-  padding: 1rem;
-`;
-
 export const Layout: FC<IProps> = ({ children }) => {
   return (
-    <LayoutStyles>
+    <div>
       <Header />
-      <InnerStyles>{children}</InnerStyles>
-    </LayoutStyles>
+      <div className="layout">{children}</div>
+    </div>
   );
 };
 
 // CSS
-const LayoutStyles = styled.div`
-  margin: 0;
-`;
 
 export default Layout;
