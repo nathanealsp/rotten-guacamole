@@ -17,11 +17,11 @@ Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-// interface IProps {
-//   apollo: ApolloClient<NormalizedCacheObject>;
-//   Component: any;
-//   pageProps: any;
-// }
+interface IProps {
+  apollo: ApolloClient<NormalizedCacheObject>;
+  Component: any;
+  pageProps: any;
+}
 
 const MyApp = ({ Component, pageProps, apollo }) => {
   return (
