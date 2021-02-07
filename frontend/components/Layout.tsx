@@ -26,7 +26,7 @@ const HeaderStyles = styled.header`
   z-index: 1;
   padding: 20px;
 
-  h1 {
+  & .logo-ish {
     font-size: 2rem;
     font-weight: 600;
     text-decoration: underline;
@@ -34,7 +34,7 @@ const HeaderStyles = styled.header`
     cursor: pointer;
   }
 
-  span {
+  & span {
     font-size: 2.5rem;
     background: red;
     padding: 5px 10px 5px 2px;
@@ -46,7 +46,7 @@ const HeaderStyles = styled.header`
 const Header: FC = () => (
   <Link href="/">
     <HeaderStyles>
-      <h1>
+      <h1 className="logo-ish">
         Rotten <span>Guacamole</span>
       </h1>
     </HeaderStyles>

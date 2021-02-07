@@ -18,8 +18,12 @@ export const MovieDetailCard = ({ movie }) => {
         </Hero>
         <div className={styles.description}>
           <div className={styles.column2}>
-            <p className={styles.columTwo}>{movie.overview}</p>
-
+            <p className={styles.rottenScore}>
+              Rotten Guac Score
+              <span className={styles.rottenScoreVote}>
+                {movie?.vote_average}
+              </span>
+            </p>
             {movie.genres && (
               <div className={styles.genres}>
                 {movie.genres.map((genre, idx) => (
@@ -30,19 +34,16 @@ export const MovieDetailCard = ({ movie }) => {
               </div>
             )}
 
+            <p className={styles.columTwo}>{movie.overview}</p>
             <div className={styles.moreInfo}>
               <p>
-                Release date:
+                Release date
                 <span className={styles.info}>{movie?.release_date}</span>
               </p>
               <p>
-                Runtime:
+                Runtime
                 <span className={styles.info}>{movie?.runtime} mins</span>
               </p>
-              {/* <p>
-                Rotten Guac Score:
-                <span className={styles.info}>{movie?.vote_average}</span>
-              </p> */}
             </div>
           </div>
         </div>

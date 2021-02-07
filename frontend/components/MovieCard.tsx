@@ -59,7 +59,7 @@ const Button = styled.div`
   font-family: 'XfinityStandard', helvetica, arial, sans-serif;
   padding: 14px;
   margin: 2rem 2.5rem 0rem 1.8rem;
-  border: 2px solid rgba(0, 0, 0, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
   border-radius: 0;
   overflow: hidden;
   z-index: 1;
@@ -74,14 +74,14 @@ const Button = styled.div`
     transform: translateX(-50%);
     width: 0;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 0, 0, 1);
     z-index: -1;
     transition: width 150ms ease-in-out;
   }
 
   &:hover {
     color: #fff;
-    border: 2px solid rgba(255, 255, 255, 1);
+    border: 2px solid rgba(0, 0, 0, 1);
   }
 
   &:hover:after {

@@ -24,7 +24,8 @@ export const GET_MOVIE_DETAIL = gql`
       genres {
         name
       }
-      # vote_average
+      status
+      vote_average
       runtime
       release_date
     }
