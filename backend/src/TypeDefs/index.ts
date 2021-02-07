@@ -79,7 +79,7 @@ export const typeDefs = gql`
     tagline: String
     title: String
     video: Boolean
-    vote_average: Int
+    vote_average: Float
     vote_count: Int
   }
 
