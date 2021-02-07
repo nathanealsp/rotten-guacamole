@@ -1,8 +1,6 @@
 import React, { FC, ReactNode } from 'react';
-import styled from 'styled-components';
-import Link from 'next/link';
-
-import { GlobalStyles } from './styles/GlobalStyles';
+import styled, { createGlobalStyle } from 'styled-components';
+import Header from './Header';
 
 interface IProps {
   children: ReactNode;
@@ -14,43 +12,42 @@ const InnerStyles = styled.div`
   padding: 1rem;
 `;
 
-const HeaderStyles = styled.header`
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: grid;
-  place-content: center;
-  color: white;
-  z-index: 1;
-
-  & .logo-ish {
-    font-size: 2rem;
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: red;
-    cursor: pointer;
+const GlobalStyles = createGlobalStyle`
+  html {
+    font-size: 16px;
+    font-size: 1rem;
+    box-sizing: border-box;
   }
 
-  & span {
-    font-size: 2.5rem;
-    background: red;
-    padding: 5px 10px 5px 2px;
-    display: inline-block;
-    transform: skewX(-12deg);
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    position: relative;
+    background: #fff;
+    line-height: 1.57143;
+    color: #191919;
+    font-family: 'XfinityStandard', helvetica, arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(---black);
+  }
+  a:hover {
+    text-decoration: underline;
   }
 `;
-
-const Header: FC = () => (
-  <Link href="/">
-    <HeaderStyles>
-      <h1 className="logo-ish">
-        Rotten <span>Guacamole</span>
-      </h1>
-    </HeaderStyles>
-  </Link>
-);
 
 export const Layout: FC<IProps> = ({ children }) => {
   return (
