@@ -69,14 +69,12 @@ const Hero = styled.div`
     overflow: hidden;
     top: 0;
     left: 0;
-    background: red;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg');
     z-index: -1;
 
-    ${props =>
-      props.posterImage &&
+    ${(props) =>
+      props?.posterImage &&
       css`
-        background: url(${props.posterImage.image}) center/cover no-repeat;
+        background: url(${props?.posterImage.image}) center/cover no-repeat;
       `}
 
     transform: skewY(-2.2deg);
