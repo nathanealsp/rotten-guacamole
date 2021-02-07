@@ -7,8 +7,6 @@ import withApollo from '../hooks/withApollo';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client';
 
-import { GlobalStyles } from '../components/styles/GlobalStyles';
-
 import '../styles/globals.css';
 
 // NPROGRESS BAR
@@ -26,7 +24,6 @@ interface IProps {
 const MyApp = ({ Component, pageProps, apollo }) => {
   return (
     <ApolloProvider client={apollo}>
-      <GlobalStyles />
       <Layout>
         <Component {...pageProps} />
       </Layout>
