@@ -175,6 +175,13 @@ export const GlobalStyles = styled.createGlobalStyle`
     box-sizing: border-box;
   }
 
+  *,
+  *::before *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     word-break: break-word;
     overflow-wrap: break-word;
@@ -184,6 +191,7 @@ export const GlobalStyles = styled.createGlobalStyle`
     color: #191919;
     font-family: 'XfinityStandard', helvetica, arial, sans-serif;
     font-weight: 400;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.2;
+    background-color: rgba(0, 0, 0, 0.9);
   }
 `;

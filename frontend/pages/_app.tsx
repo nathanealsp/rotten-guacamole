@@ -9,6 +9,8 @@ import { ApolloClient, NormalizedCacheObject } from '@apollo/client';
 
 import { GlobalStyles } from '../components/styles/GlobalStyles';
 
+import '../styles/globals.css';
+
 // NPROGRESS BAR
 import '../components/styles/nprogress.css';
 Router.events.on('routeChangeStart', () => NProgress.start());
