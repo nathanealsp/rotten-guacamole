@@ -7,7 +7,7 @@ import withApollo from '../hooks/withApollo';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client';
 
-import { GlobalStyles } from '../components/styles/GlobalStyles';
+// import { GlobalStyles } from '../components/styles/GlobalStyles';
 
 import '../styles/globals.css';
 
@@ -26,7 +26,7 @@ interface IProps {
 const MyApp: FC<IProps> = ({ Component, pageProps, apollo }) => {
   return (
     <ApolloProvider client={apollo}>
-      <GlobalStyles />
+      {/* <GlobalStyles /> */}
       <Layout>
         <Component {...pageProps} />
       </Layout>
