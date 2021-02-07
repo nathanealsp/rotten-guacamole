@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
 
 interface IProps {
@@ -14,7 +13,5 @@ export const Layout: FC<IProps> = ({ children }) => {
     </div>
   );
 };
-
-// CSS
 
 export default Layout;

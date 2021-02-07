@@ -21,7 +21,7 @@ interface IProps {
   pageProps: any;
 }
 
-const MyApp = ({ Component, pageProps, apollo }) => {
+const MyApp: FC<IProps> = ({ Component, pageProps, apollo }) => {
   return (
     <ApolloProvider client={apollo}>
       <Layout>
