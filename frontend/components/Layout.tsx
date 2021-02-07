@@ -44,6 +44,7 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: var(---black);
   }
+
   a:hover {
     text-decoration: underline;
   }
