@@ -5,6 +5,8 @@ import styles from '../styles/Moviecard.module.css';
 
 const BACKDROP_PATH = process.env.NEXT_PUBLIC_BACKDROP_PATH;
 
+// const BACKDROP_PATH = 'https://image.tmdb.org/t/p/w1280';
+
 export const MovieDetailCard = ({ movie }) => {
   const image = `${BACKDROP_PATH}${movie.backdrop_path}`;
   return (
