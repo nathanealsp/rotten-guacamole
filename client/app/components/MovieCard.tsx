@@ -23,13 +23,13 @@ export default function MovieCard({
       <div className="p-4 space-y-2 font-medium">
         <div className="flex items-center">
           <div className="bg-muted pr-2 rounded-md flex items-center justify-center">
-            <FilmSlate size={26} />
+            <FilmSlate size={26} className="text-green-700" />
           </div>
           <span className="text-muted-foreground ">{movie.title}</span>
         </div>
         <div className="flex items-center">
           <div className="bg-muted pr-2 rounded-md flex items-center justify-center">
-            <CalendarDots size={26} />
+            <CalendarDots size={26} className="text-green-700" />
           </div>
           <span className="text-muted-foreground">{movie.release_date}</span>
         </div>
