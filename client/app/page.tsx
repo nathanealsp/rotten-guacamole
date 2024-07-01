@@ -1,24 +1,17 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useMovies } from '@/app/api/useMovies';
 
-import Moviecard from '@/app/components/MovieCard';
+import MovieList from '@/app/now-playing/page';
+import MovieCardSkeleton from '@/app/components/MovieCardSkeleton';
 
 export default function Home() {
-  const { data, isLoading } = useMovies();
-
-  if (isLoading) return <div>Loading...</div>;
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-        {data?.map((movie) => (
-          <li key={movie.id}>
-            <Moviecard movie={movie} />
-          </li>
-        ))}
-      </ul>
+      <Suspense fallback={<MovieCardSkeleton />}>
+        <MovieList />
+      </Suspense>
     </main>
   );
 }

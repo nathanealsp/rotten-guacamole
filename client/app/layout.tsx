@@ -24,14 +24,14 @@ export default function RootLayout({
       <body
         className={`width-full bg-contrast text-primary antialiased dark:bg-primary ${urbanist.className}`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navigation />
-          <ReactQueryProvider>
-            <div className="mx-auto max-w-[900px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
-              {children}
-            </div>
-          </ReactQueryProvider>
-        </ThemeProvider>
+        {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
+        <Navigation />
+        <ReactQueryProvider>
+          <div className="mx-auto max-w-[900px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+            {children}
+          </div>
+        </ReactQueryProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

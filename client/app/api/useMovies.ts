@@ -19,3 +19,12 @@ export const useMovies = () =>
     refetchOnMount: false,
     staleTime: Infinity,
   });
+
+export const getMovieList = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 500));
+  const res = await fetch(
+    `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`,
+  );
+  const data: MovieListResponse = await res.json();
+  return data.results;
+};
