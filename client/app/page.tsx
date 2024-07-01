@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 
-import MovieList from '@/app/now-playing/page';
+import MovieList from '@/app/components/MovieList';
 import MovieCardSkeleton from '@/app/components/MovieCardSkeleton';
 
 export const experimental_ppr = true;
