@@ -1,14 +1,14 @@
 import Image from 'next/image';
+import { CalendarDots, FilmSlate } from '@phosphor-icons/react/dist/ssr';
 
 import { MovieListResponse } from '@/app/api/types/movies';
-
-import { CalendarDots, FilmSlate } from '@phosphor-icons/react';
 
 export default function MovieCard({
   movie,
 }: {
   movie: MovieListResponse['results'][0];
 }) {
+  if (!movie) return null;
   return (
     <div className="w-full max-w-80 mx-auto bg-background rounded-lg shadow-lg shadow-green-900 overflow-hidden">
       <div className="relative">
@@ -23,20 +23,13 @@ export default function MovieCard({
       <div className="p-4 space-y-2 font-medium">
         <div className="flex items-center">
           <div className="bg-muted pr-2 rounded-md flex items-center justify-center">
-            <FilmSlate
-              fill="green"
-              size={26}
-              className="text-muted-foreground"
-            />
+            <FilmSlate size={26} />
           </div>
           <span className="text-muted-foreground ">{movie.title}</span>
         </div>
         <div className="flex items-center">
           <div className="bg-muted pr-2 rounded-md flex items-center justify-center">
-            <CalendarDots
-              fill="green"
-              className="w-6 h-6 text-muted-foreground"
-            />
+            <CalendarDots size={26} />
           </div>
           <span className="text-muted-foreground">{movie.release_date}</span>
         </div>

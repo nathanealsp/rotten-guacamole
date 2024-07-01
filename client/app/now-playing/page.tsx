@@ -1,5 +1,7 @@
-import React, { Suspense } from 'react';
-import { useMovies, getMovieList } from '@/app/api/useMovies';
+'use server';
+
+import React from 'react';
+import { getMovieList } from '@/app/api/useMovies';
 
 import Moviecard from '@/app/components/MovieCard';
 

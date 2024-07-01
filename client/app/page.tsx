@@ -1,10 +1,9 @@
-'use client';
-
 import React, { Suspense } from 'react';
-import { useMovies } from '@/app/api/useMovies';
 
 import MovieList from '@/app/now-playing/page';
 import MovieCardSkeleton from '@/app/components/MovieCardSkeleton';
+
+export const experimental_ppr = true;
 
 export default function Home() {
   return (
