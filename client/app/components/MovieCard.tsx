@@ -10,7 +10,7 @@ export default function MovieCard({
 }) {
   if (!movie) return null;
   return (
-    <div className="w-full max-w-80 mx-auto bg-background rounded-lg shadow-lg shadow-green-900 overflow-hidden">
+    <div className="w-full max-w-80 mx-auto    bg-background rounded-lg shadow-lg shadow-green-900 overflow-hidden">
       <div className="relative">
         <Image
           src={`${process.env.NEXT_PUBLIC_POSTER_PATH}${movie.poster_path}`}
