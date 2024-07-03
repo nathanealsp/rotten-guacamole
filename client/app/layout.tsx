@@ -20,14 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
         className={`width-full bg-contrast text-primary antialiased dark:bg-primary ${urbanist.className}`}
       >
         {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
         <Navigation />
         <ReactQueryProvider>
-          <div className='mx-auto max-w-[1000px] px-4 pb-14 pt-4 md:px-6 md:pb-44 md:pt-20'>
+          <div className="mx-auto max-w-[1000px] px-4 pb-14 pt-4 md:px-6 md:pb-44 md:pt-20">
             {children}
           </div>
         </ReactQueryProvider>

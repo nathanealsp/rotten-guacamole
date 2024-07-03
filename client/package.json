@@ -6,16 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "eslint app --fix && pnpm format",
-    "lint:strict": "eslint --max-warnings=0 src",
-    "typecheck": "tsc --noEmit --incremental false",
-    "test:watch": "jest --watch",
-    "test": "jest",
-    "format": "prettier -w .",
-    "format:check": "prettier -c .",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "prepare": "husky install"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -28,7 +19,6 @@
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-popover": "^1.0.7",
     "@radix-ui/react-select": "^2.0.0",
-    "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.0.4",
     "@tanstack/react-query": "^5.48.0",
@@ -36,19 +26,15 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
-    "eslint-plugin-tailwindcss": "^3.17.4",
     "framer-motion": "^11.2.12",
     "lucide-react": "^0.400.0",
     "next": "15.0.0-rc.0",
     "next-auth": "5.0.0-beta.19",
     "next-themes": "^0.3.0",
-    "prettier": "^3.3.2",
     "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-rc-f994737d14-20240522",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7",
-    "react-icons": "^4.12.0",
-    "zod": "^3.22.4"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -59,36 +45,7 @@
     "openapi-typescript": "^7.0.0",
     "openapi-typescript-codegen": "^0.29.0",
     "postcss": "^8.4.38",
-    "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.5.2",
-    "@commitlint/cli": "^16.3.0",
-    "@commitlint/config-conventional": "^16.2.4",
-    "@svgr/webpack": "^8.1.0",
-    "@tailwindcss/forms": "^0.5.7",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@types/testing-library__jest-dom": "^5.14.9",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "autoprefixer": "^10.4.16",
-    "eslint-config-prettier": "^8.10.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "husky": "^7.0.4",
-    "jest": "^27.5.1",
-    "lint-staged": "^12.5.0",
-    "next-router-mock": "^0.9.0",
-    "next-sitemap": "^2.5.28",
-    "prettier": "^2.8.8"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings=0",
-      "prettier -w"
-    ],
-    "**/*.{json,css,scss,md,webmanifest}": [
-      "prettier -w"
-    ]
+    "typescript": "^5.5.2"
   }
 }
