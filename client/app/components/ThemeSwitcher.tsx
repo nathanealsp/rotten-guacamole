@@ -32,7 +32,7 @@ export default function ThemeSwitcher() {
             open ? 'text-primary' : 'text-secondary',
           );
           return (
-            <div className="relative">
+            <div className='relative'>
               <Listbox.Button
                 className={clsx(
                   'relative flex h-8 w-8 cursor-default items-center justify-center rounded-lg',
@@ -53,7 +53,7 @@ export default function ThemeSwitcher() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ type: 'spring', bounce: 0.3, duration: 0.3 }}
-                    className="w-42 absolute right-0 z-10 mt-2 max-h-60 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base capitalize shadow-md focus:outline-none sm:text-sm"
+                    className='w-42 absolute right-0 z-10 mt-2 max-h-60 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base capitalize shadow-md focus:outline-none sm:text-sm'
                   >
                     {themes.map((theme) => (
                       <Listbox.Option
@@ -76,10 +76,10 @@ export default function ThemeSwitcher() {
                               {theme == 'system' ? 'Automatic' : theme}
                             </span>
                             {selected ? (
-                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 dark:text-neutral-50">
+                              <span className='absolute inset-y-0 left-0 flex items-center pl-3 dark:text-neutral-50'>
                                 <CheckIcon
-                                  className="h-5 w-5"
-                                  aria-hidden="true"
+                                  className='h-5 w-5'
+                                  aria-hidden='true'
                                 />
                               </span>
                             ) : null}
