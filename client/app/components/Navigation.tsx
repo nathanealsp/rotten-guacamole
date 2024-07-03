@@ -1,25 +1,25 @@
-'use client';
-import { Fragment } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import Image from 'next/image';
+"use client";
+import { Fragment } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
-import clsx from 'clsx';
-import { Popover, Transition } from '@headlessui/react';
-import { Bars3Icon } from '@heroicons/react/20/solid';
+import clsx from "clsx";
+import { Popover, Transition } from "@headlessui/react";
+import { Bars3Icon } from "@heroicons/react/20/solid";
 
-import { NavLink } from '@/app/components/NavLink';
-import ThemeSwitcher from '@/app/components/ThemeSwitcher';
+import { NavLink } from "@/app/components/NavLink";
+import ThemeSwitcher from "@/app/components/ThemeSwitcher";
 
 const links = [
-  { label: 'Now Playing', href: '/now-playing' },
-  { label: 'Popular', href: '/popular' },
-  { label: 'Top Rated', href: '/top-rated' },
-  { label: 'Up Coming', href: '/up-coming' },
+  { label: "Now Playing", href: "/now-playing" },
+  { label: "Popular", href: "/popular" },
+  { label: "Top Rated", href: "/top-rated" },
+  { label: "Up Coming", href: "/up-coming" },
 ];
 
 export default function Navigation() {
-  const pathname = `/${usePathname().split('/')[1]}`; // active paths on dynamic sub-pages
+  const pathname = `/${usePathname().split("/")[1]}`; // active paths on dynamic sub-pages
 
   return (
     <header className="md:mt-6">
@@ -123,7 +123,7 @@ export default function Navigation() {
           </svg>
         </Link>
 
-        <div className="top-0 left-0 w-full to-transparent p-4">
+        <div className="left-0 top-0 w-full to-transparent p-4">
           <h1 className="text-3xl font-bold text-green-700">
             Rotten Guacomole
           </h1>
