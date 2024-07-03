@@ -27,7 +27,7 @@ export default function RootLayout({
         {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
         <Navigation />
         <ReactQueryProvider>
-          <div className="mx-auto max-w-[900px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+          <div className="mx-auto max-w-[1000px] px-4 pb-14 pt-4 md:px-6 md:pb-44 md:pt-20">
             {children}
           </div>
         </ReactQueryProvider>
