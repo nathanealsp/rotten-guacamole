@@ -6,8 +6,6 @@ import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from 'next-themes';
 
-import * as Select from '@radix-ui/react-select';
-
 import { MoonIcon, CheckIcon } from '@heroicons/react/20/solid';
 import { SunIcon } from '@heroicons/react/24/outline';
 

@@ -1,26 +1,14 @@
-"use client";
-import { Fragment } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import Image from "next/image";
+'use client';
+import Link from 'next/link';
 
-import clsx from "clsx";
-import { Popover, Transition } from "@headlessui/react";
-import { Bars3Icon } from "@heroicons/react/20/solid";
-
-import { NavLink } from "@/app/components/NavLink";
-import ThemeSwitcher from "@/app/components/ThemeSwitcher";
-
-const links = [
-  { label: "Now Playing", href: "/now-playing" },
-  { label: "Popular", href: "/popular" },
-  { label: "Top Rated", href: "/top-rated" },
-  { label: "Up Coming", href: "/up-coming" },
+export const links = [
+  { label: 'Now Playing', href: '/now-playing' },
+  { label: 'Popular', href: '/popular' },
+  { label: 'Top Rated', href: '/top-rated' },
+  { label: 'Up Coming', href: '/up-coming' },
 ];
 
 export default function Navigation() {
-  const pathname = `/${usePathname().split("/")[1]}`; // active paths on dynamic sub-pages
-
   return (
     <header className="md:mt-6">
       <nav className="mx-auto flex max-w-[700px] items-center justify-between gap-3 px-4 py-3 md:px-6">
@@ -37,8 +25,7 @@ export default function Navigation() {
             height="49"
             viewBox="0 0 348 449"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -52,8 +39,7 @@ export default function Navigation() {
               x="121"
               y="0"
               width="30"
-              height="61"
-            >
+              height="61">
               <path d="M121.31 0H150.943V60.5698H121.31V0Z" fill="white" />
             </mask>
             <g mask="url(#mask0_21_150)">
@@ -71,12 +57,8 @@ export default function Navigation() {
               x="0"
               y="1"
               width="148"
-              height="151"
-            >
-              <path
-                d="M0.737 1.20593H147.239V151.595H0.737V1.20593Z"
-                fill="white"
-              />
+              height="151">
+              <path d="M0.737 1.20593H147.239V151.595H0.737V1.20593Z" fill="white" />
             </mask>
             <g mask="url(#mask1_21_150)">
               <path
@@ -99,12 +81,8 @@ export default function Navigation() {
               x="9"
               y="199"
               width="339"
-              height="250"
-            >
-              <path
-                d="M9.10034 199.194H347.942V448.198H9.10034V199.194Z"
-                fill="white"
-              />
+              height="250">
+              <path d="M9.10034 199.194H347.942V448.198H9.10034V199.194Z" fill="white" />
             </mask>
             <g mask="url(#mask2_21_150)">
               <path
@@ -124,9 +102,7 @@ export default function Navigation() {
         </Link>
 
         <div className="left-0 top-0 w-full to-transparent p-4">
-          <h1 className="text-3xl font-bold text-green-700">
-            Rotten Guacomole
-          </h1>
+          <h1 className="text-3xl font-bold text-green-700">Rotten Guacomole</h1>
         </div>
         {/* <ul className="hidden items-center gap-1 md:flex">
           {links.map((link) => (

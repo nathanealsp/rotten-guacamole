@@ -1,9 +1,10 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { Urbanist } from 'next/font/google';
 import './globals.css';
+
 // COMPONENTS
 import { ReactQueryProvider } from '@/app/components/ReactQueryProvider';
-import { ThemeProvider } from '@/app/components/ThemeProvider';
 
 import Navigation from '@/app/components/Navigation';
 
@@ -22,8 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`width-full bg-contrast text-primary antialiased dark:bg-primary ${urbanist.className}`}
-      >
+        className={`width-full bg-contrast text-primary antialiased dark:bg-primary ${urbanist.className}`}>
         {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
         <Navigation />
         <ReactQueryProvider>

@@ -1,13 +1,6 @@
 import Image from 'next/image';
-import { CalendarDots, FilmSlate } from '@phosphor-icons/react/dist/ssr';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { CalendarDots } from '@phosphor-icons/react/dist/ssr';
+import { Card, CardContent, CardDescription } from '@/components/ui/card';
 
 import dayjs from 'dayjs';
 
